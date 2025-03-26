@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net460</TargetFramework>
+    <AssemblyName>SoldItems</AssemblyName>
+    <Product>My first plugin</Product>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <RestoreAdditionalProjectSources>
+      https://api.nuget.org/v3/index.json;
+      https://nuget.bepinex.dev/v3/index.json;
+      https://nuget.samboy.dev/v3/index.json
+    </RestoreAdditionalProjectSources>
+    <RootNamespace>SoldItems</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.NET.Framework.Launcher" Version="6.0.0-be.*" IncludeAssets="compile" />
+    <PackageReference Include="UnityEngine"/>
+    <PackageReference Include="BepInEx.Core"/>
+    <PackageReference Include="HarmonyX" Version="2.10.2" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="UnityEngine" Version="0.0.0.0" Culture="neutral" PublicKeyToken="null">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Supermarket Simulator\Supermarket Simulator_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule" Version="0.0.0.0" Culture="neutral" PublicKeyToken="null">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Supermarket Simulator\Supermarket Simulator_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+     <Reference Include="MyBox" Version="0.0.0.0" Culture="neutral" PublicKeyToken="null">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Supermarket Simulator\Supermarket Simulator_Data\Managed\MyBox.dll</HintPath>
+    </Reference>
+    <Reference Include="AssemblyCSharp" Version="0.0.0.0" Culture="neutral" PublicKeyToken="null">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Supermarket Simulator\Supermarket Simulator_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Steamworks.Win64" Version="0.0.0.0" Culture="neutral" PublicKeyToken="null">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Supermarket Simulator\Supermarket Simulator_Data\Managed\Facepunch.Steamworks.Win64.dll</HintPath>
+    </Reference>
+     <Reference Include="netstandard" Version="0.0.0.0" Culture="neutral" PublicKeyToken="null">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Supermarket Simulator\Supermarket Simulator_Data\Managed\netstandard.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

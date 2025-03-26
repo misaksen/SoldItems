@@ -1,0 +1,28 @@
+# Binaries
+*.dll
+*.exe
+
+# Build directories
+bin/
+obj/
+
+# IDE-specific files
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
